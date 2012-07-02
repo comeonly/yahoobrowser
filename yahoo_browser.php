@@ -40,7 +40,7 @@
  * Class representing a HTTP request message
  * PEAR package should be installed
  */
-require 'Request.php';
+require 'HTTP/Request.php';
 
 /**
  * Class login and scraping your yahoo.co.jp pages
@@ -57,10 +57,11 @@ class YahooBrowser
      * HTTP_Request Class Object
      */
     protected $rq;
-    protected $cookies;
+
     protected $id;
     protected $pass;
-    protected $body;
+    public    $cookies;
+    public    $body;
 
     /**
      * construction function
@@ -97,7 +98,7 @@ class YahooBrowser
     function login()
     {
         $login_url = 'https://login.yahoo.co.jp/config/login?';
-        $login_params = '.lg=jp&.intl=jp&.src=auc&.done=http://auctions.yahoo.co.jp/'
+        $login_params = '.lg=jp&.intl=jp&.src=auc&.done=http://auctions.yahoo.co.jp/';
         $current_cookies = $this->cookies;
         $this->cookies = array();
         $this->getBody('http://auctions.yahoo.co.jp/', null);
