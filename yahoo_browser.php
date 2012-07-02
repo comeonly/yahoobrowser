@@ -1,6 +1,6 @@
 <?php
 /**
- * Class longin and scraping your yahoo.co.jp pagese
+ * Class login and scraping your yahoo.co.jp pages
  *
  * PHP version 5
  *
@@ -43,7 +43,7 @@
 require 'Request.php';
 
 /**
- * Class longin and scraping your yahoo.co.jp pagese
+ * Class login and scraping your yahoo.co.jp pages
  *
  * @category Scraping
  * @package  Yahoo_Browser
